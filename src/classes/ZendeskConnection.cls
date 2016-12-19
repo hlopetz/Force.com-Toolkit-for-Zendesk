@@ -248,4 +248,12 @@ global class ZendeskConnection {
         } catch(Exception e) {System.debug(e);}
         return zerr;
     }
+
+    /**
+     * @description
+     * created for 3rd party test purposes
+     */
+    global static void setHttpCalloutMock(HttpCalloutMock mock) {
+        Test.setMock(HttpCalloutMock.class, mock);
+    }
 }
